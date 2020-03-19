@@ -1,3 +1,6 @@
+/*escaping*/
+/*When you see a pattern, when you are reusing the same code over and over that's a good indication to create a mixin*/
+/*place holder values are called parameters - values that we are passing in when the mixin is called are referred to as arguments*/
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
