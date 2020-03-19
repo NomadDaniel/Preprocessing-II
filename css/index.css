@@ -209,6 +209,17 @@ img {
   font-family: 'Ubuntu';
   color: #212529;
 }
+@media (max-width: 500px) {
+  .navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .navigation nav {
+    width: 100%;
+  }
+}
 .footer {
   width: 100%;
   border-top: 2px dashed silver;
