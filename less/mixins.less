@@ -8,8 +8,32 @@
   align-items:@align;
 }
 
-.fonts(@size, @fam){
+.fonts(@size, @fam, @color){
   font-size:@size;
   font-family:@fam;
+  color:@color;
 }
+
 /*place holder values are called parameters - values that we are passing in when the mixin is called are referred to as arguments*/
+
+.bordered(){
+  border-bottom:2px dashed @navigation-border;
+  padding:2%;
+}
+
+.custom-btn(@button-bg, @width:200px, @font-color) {
+ display: block;
+ background-color: @button-bg;
+ margin: 0 10px 20px;
+ cursor: pointer;
+ width: @width;
+ height: 45px;
+ font-size: 2rem;
+ border-radius: 10px;
+ color:@font-color; 
+  
+  &:hover{
+    background-color:@font-color;
+    color:@button-bg;
+  }
+}
