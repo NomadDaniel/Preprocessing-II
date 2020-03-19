@@ -1,4 +1,28 @@
 // Follow the order in the readme
-html {
-  background-color: red;
-}
+// Task 3: Import LESS Files
+// Navigate to your index.less file. Notice the file is blank. In order for you to see the styles for this project you must import them in a certain order. That order is as follows:
+
+// variables.less
+// mixins.less
+// reset.less
+// global.less
+// navigation.less
+// footer.less
+// home-page.less
+
+
+// Vars and Mixins Here because they are lazy loaded
+@import "variables";
+@import "mixins";
+
+//General Styles Here
+@import "reset";
+@import "global";
+
+// Components Here
+
+@import "navigation";
+@import "footer";
+@import "home-page";
+
+// no styles here!
