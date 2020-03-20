@@ -293,6 +293,9 @@ header {
     width: 100%;
   }
 }
+.home .inverse-content .text-content {
+  padding-left: 0%;
+}
 .home .inverse-content .img-content {
   width: 48%;
   text-align: center;
