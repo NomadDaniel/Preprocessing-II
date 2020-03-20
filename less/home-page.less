@@ -1,75 +1,118 @@
 // Add margins about header and use .bordered() mixin
 
 header {
-  margin-top: 2%;
-  .bordered(); 
+margin-top: 2%;
+width: 100%;
+.bordered(); 
+@media @mobile {
+  .flex(column, center, center);
+  width: 100%;
+  }
 }
+
+
+// ==== Below is source code, modified for media queries ====
+.home {
+
+//start content-section, for @mobile 500px 
+.content-section {
+  margin: 30px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  @media @mobile {
+    .flex(column, center, center);
+    }
+      
+  .text-content {
+    width: 48%;
+    @media @mobile {
+    width: 100%;
+    }
+  }
+
+  .img-content {
+    width: 48%;
+    @media @mobile {
+    width: 100%;
+    }
+    img {
+      border-radius: 10px;
+      width: 100%;
+    } 
+    
+  }
+  
+}
+
+
+// ============= End .home content ================
+
+
+.inverse-content {
+  padding-bottom: 30px;
+  border-bottom: 2px dashed @navigation-border;
+  
+  @media @mobile {
+    .flex(column-reverse, center, center);
+    width: 100%;
+    .text-content{
+      width: 100%;
+      }
+    }
+  
+    .text-content {
+      // padding-left: 1%;
+    }
+
+    .img-content {
+      // padding-left: 0;
+      width: 48%;
+      text-align: center;
+      @media @mobile {
+        width: 100%;
+      }
+    }
+}
+
+.content-destination {
+  width: 75%;
+  margin: 0 auto 30px;
+  @media @mobile {
+    width: 100%;
+  }
+  img {
+    border-radius: 10px;
+  }
+}
+
+.content-pick {
+  padding-top: 30px;
+  border-top: 2px dashed @navigation-border;
+  display: flex;
+  justify-content: space-between;
+  @media @mobile {
+    .flex(column, center, center)
+  }
+  
+
+  .destination {
+    width: 30%;
+    margin-bottom: 30px;
+    @media @mobile {
+      width: 80%;
+    }
+  }
+}
+
+// home
 
 // Style bottons
 button {
-  .custom-btn(@button-bg, @width:200px, @font-color)
+.custom-btn(@button-bg, @width:150px, @font-color);
+align-items: center;
+@media @mobile {
+  width: 100%;
+  }
 }
-
-
-// ============Start source code for project===========
-.home {
-
-  .content-section {
-    margin: 30px 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
-   
-    
-    .text-content {
-      width: 48%;
-      padding-right: 1%;
-    }
-
-    .img-content {
-      width: 48%;
-      padding-left: 1%;
-
-      img {
-        border-radius: 10px;
-      }
-    }
-  }
-
-  .inverse-content {
-    padding-bottom: 30px;
-    border-bottom: 2px dashed @navigation-border;
-
-    .text-content {
-      padding-left: 1%;
-      padding-right: 0;
-    }
-
-    .img-content {
-      padding-right: 1%;
-      padding-left: 0;
-    }
-  }
-
-  .content-destination {
-    width: 75%;
-    margin: 0 auto 30px;
-
-    img {
-      border-radius: 10px;
-    }
-  }
-
-  .content-pick {
-    padding-top: 30px;
-    border-top: 2px dashed @navigation-border;
-    display: flex;
-    justify-content: space-between;
-
-    .destination {
-      width: 30%;
-      margin-bottom: 30px;
-    }
-  }
-}// home
+}
